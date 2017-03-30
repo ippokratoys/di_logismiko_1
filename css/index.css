@@ -1,0 +1,17 @@
+img{
+}
+p{
+}
+div.icon{
+    width: 320px;
+    padding: 15px;
+    margin: 0;
+    line-height:150%;
+}
+
+#main_div{
+    padding:4px;
+    margin: 50;
+/*    border: 10px solid gray;*/
+/*    color: green;*/
+}
