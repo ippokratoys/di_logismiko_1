@@ -9,12 +9,10 @@ public class Main {
 
 		ArrayList<Comittor> coms;
 		ArrayList<Branch>   branches;
-		//String path="/home/maria/Desktop/java/erg1/example1";
 
 		Scanner reader = new Scanner(System.in);  // Reading from System.in
 		System.out.println("Enter the path of repo(better full): ");
 		String path= reader.nextLine();
-		//path="/home/maria/Desktop/java/erg1/example1";
 		Repositorie my_repo = new Repositorie(path);
 		reader.close();
 		number_of_files=my_repo.num_of_files();
@@ -30,7 +28,7 @@ public class Main {
 		System.out.printf("Print the writers(%d) Commits(%d):\n",my_repo.num_writters(),my_repo.num_commits());
 		branches=my_repo.get_branches();
 		branches=my_repo.branch_update();
-		RepoToHTML html=new RepoToHTML("/home/maria/Desktop/java/Git_cml",my_repo,"/home/maria/Desktop/java/Git_cml/html/templates");
+		RepoToHTML html=new RepoToHTML("./",my_repo,"html/templates");
 		html.generateHTML();
 	}
 

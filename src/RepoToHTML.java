@@ -133,9 +133,10 @@ public class RepoToHTML {
 		root.put("total_comitts", my_repo.num_commits());
 		this.generatepage(root, "branches.tpl",path+"/branches.html");
 		
-//		root= new HashMap<>();
-//		root.put("cur_page", "about");
-//		this.generatepage(root, "about.tpl",path+"/about.html");
+		root= new HashMap<>();
+		root.put("cur_page", "about");
+		root.put("repo_name",my_repo.get_name());
+		this.generatepage(root, "about.tpl",path+"/about.html");
 		System.out.println("End of branches.html");
 
 		System.out.println("End of output");
